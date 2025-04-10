@@ -1,4 +1,3 @@
-/* Reset e base */
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +14,7 @@ body {
   color: #333;
 }
 
-/* Centraliza todo o conteúdo na página */
+
 .page {
   width: 100%;
   display: flex;
@@ -24,7 +23,6 @@ body {
   padding: 40px 20px;
 }
 
-/* Limita e centraliza o conteúdo dentro de um "quadro branco" */
 .wrapper {
   height: 100%;
   max-width: 1200px;
@@ -55,9 +53,9 @@ body {
 }
 
 .header .logo {
-  width: 120px;        /* aumenta a largura */
-  max-height: 100px;    /* limita a altura pra não esticar o header */
-  object-fit: contain; /* mantém proporção sem cortar */
+  width: 120px;
+  max-height: 100px;
+  object-fit: contain;
 }
 
 .header h2 {
@@ -71,15 +69,15 @@ body {
   font-size: 14px;
 }
 
-/* Layout principal: conteúdo + desafio */
+
 .main {
   display: flex;
   gap: 30px;
-  align-items: stretch; /* <- ESSENCIAL para igualar a altura */
+  align-items: stretch; 
   height: 100%;
 }
 
-/* Área de conteúdo (esquerda) */
+
 .content {
   flex: 2;
   display: flex;
@@ -89,8 +87,8 @@ body {
 
 .cover {
   width: 100%;
-  height: 200px; /* ou 150px, depende do visual desejado */
-  object-fit: cover; /* mantém o preenchimento da área sem distorcer */
+  height: 200px;
+  object-fit: cover;
   border-radius: 10px;
 }
 
@@ -110,7 +108,7 @@ body {
 
 .meta {
   display: flex;
-  justify-content: space-between; /* 👈 espaça igualmente os itens */
+  justify-content: space-between;
   font-size: 14px;
   color: #777;
   margin-bottom: 15px;
@@ -121,7 +119,7 @@ body {
   line-height: 1.5;
 }
 
-/* Área de desafio (direita) - agora BEM MAIOR */
+
 .sidebar {
   flex: 1;
   background-color: #7b4fc4;
