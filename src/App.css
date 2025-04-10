@@ -1,0 +1,217 @@
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;
+}
+
+/* Centraliza todo o conteúdo na página */
+.page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Limita e centraliza o conteúdo dentro de um "quadro branco" */
+.wrapper {
+  height: 100%;
+  max-width: 1200px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabeçalho */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.header .logo {
+  width: 120px;        /* aumenta a largura */
+  max-height: 100px;    /* limita a altura pra não esticar o header */
+  object-fit: contain; /* mantém proporção sem cortar */
+}
+
+.header h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #929191e7;
+}
+
+.header .data {
+  color: #888;
+  font-size: 14px;
+}
+
+/* Layout principal: conteúdo + desafio */
+.main {
+  display: flex;
+  gap: 30px;
+  align-items: stretch; /* <- ESSENCIAL para igualar a altura */
+  height: 100%;
+}
+
+/* Área de conteúdo (esquerda) */
+.content {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cover {
+  width: 100%;
+  height: 200px; /* ou 150px, depende do visual desejado */
+  object-fit: cover; /* mantém o preenchimento da área sem distorcer */
+  border-radius: 10px;
+}
+
+.post {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.post .title {
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between; /* 👈 espaça igualmente os itens */
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.post p {
+  color: #444;
+  line-height: 1.5;
+}
+
+/* Área de desafio (direita) - agora BEM MAIOR */
+.sidebar {
+  flex: 1;
+  background-color: #7b4fc4;
+  border-radius: 20px;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  color: white;
+  max-width: 550px;
+  min-width: 350px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.score {
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.question {
+  font-size: 22px;
+  text-align: left;
+}
+.resposta {
+  font-size: 22px;
+  text-align: left;
+}
+
+.operation {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Inputs e botões */
+.input {
+  padding: 16px;
+  font-size: 20px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+
+.btn {
+  padding: 18px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn.primary {
+  background-color: #3e2e78;
+  color: white;
+}
+
+.btn.primary:hover {
+  background-color: #2c225a;
+}
+
+.btn.success {
+  background-color: #00e676;
+  color: black;
+}
+
+.btn.success:hover {
+  background-color: #00c863;
+}
+
+.btn.danger {
+  background-color: #ff1744;
+  color: white;
+}
+
+.btn.danger:hover {
+  background-color: #d50032;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar {
+    width: 100%;
+    max-width: none;
+  }
+}
