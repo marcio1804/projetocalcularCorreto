@@ -11,7 +11,6 @@ function App() {
 
   const operadores = ['+', '-', '*'];
 
-  // Função que sorteia um novo desafio
   function sortear() {
     const novoNumero1 = Math.floor(Math.random() * 100);
     const novoNumero2 = Math.floor(Math.random() * 100);
